@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Add competitors
         run: |
-          git clone https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/lukicdarkoo/webots-competition-participant-template controllers/participant_controller
+          git clone https://github.com/lukicdarkoo/webots-competition-participant-template controllers/participant_controller
           cd controllers/contest_manager && make
       - name: Record and deploy the animation
         uses: cyberbotics/webots-animation-action@feature-competition
