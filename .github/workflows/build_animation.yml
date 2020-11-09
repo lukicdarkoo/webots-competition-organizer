@@ -1,8 +1,9 @@
 
 name: Build Animation
+on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: cyberbotics/webots:R2020b-rev1-ubuntu20.04
     steps:
     - uses: actions/checkout@v2
