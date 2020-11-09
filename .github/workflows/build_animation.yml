@@ -9,7 +9,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Add competitors
-        runs: |
+        run: |
           git clone https://github.com/lukicdarkoo/webots-competition-participant-template controllers/participant_controller
           cd controllers/contest_manager && make
       - name: Record and deploy the animation
