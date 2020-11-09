@@ -12,7 +12,8 @@ jobs:
         run: |
           git clone https://github.com/lukicdarkoo/webots-competition-participant-template controllers/participant_controller
           
-          export WEBOTS_HOME_PATH=/usr/local/webots
+          which webots
+          export WEBOTS_HOME=/usr/local/webots
           cd controllers/contest_manager && make
       - name: Record and deploy the animation
         uses: cyberbotics/webots-animation-action@feature-competition
