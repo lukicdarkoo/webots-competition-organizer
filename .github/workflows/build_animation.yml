@@ -1,9 +1,16 @@
+name: Record animation
 
-name: Build Animation
 on: [push]
 
 jobs:
-  build:
-    runs-on: cyberbotics/webots:R2020b-rev1-ubuntu20.04
+  record:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Add competitors
+        runs: |
+          git clone https://github.com/lukicdarkoo/webots-competition-participant-template controllers/participant_controller
+          cd controllers/contest_manager && make
+      - name: Record and deploy the animation
+        uses: cyberbotics/webots-animation-action@master
