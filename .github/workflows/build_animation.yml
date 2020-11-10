@@ -8,14 +8,5 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      - name: Add competitors
-        run: |
-          sudo apt-get install git
-          git clone https://github.com/lukicdarkoo/webots-competition-participant-template.git controllers/participant_controller
-      - run: |
-          whereis webots
-      - run: |
-          export WEBOTS_HOME=/usr/local/webots
-          cd controllers/contest_manager && make
       - name: Record and deploy the animation
         uses: cyberbotics/webots-animation-action@feature-competition
