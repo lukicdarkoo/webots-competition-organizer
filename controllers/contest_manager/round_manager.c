@@ -33,7 +33,7 @@
 #include <webots/supervisor.h>
 
 #define INPUT_FILE_NAME "input.txt"
-#define WINNER_FILE_NAME "winner.txt"
+#define WINNER_FILE_NAME "/tmp/winner.txt"
 #define FINAL_TIME 100
 #define START_TIME 100
 
