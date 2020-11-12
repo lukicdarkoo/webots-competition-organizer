@@ -5,9 +5,8 @@ on: [push]
 jobs:
   record:
     runs-on: ubuntu-latest
-    env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - run: |
-          python3 -c "import os; os.environ['GITHUB_TOKEN']"
-      
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Record and deploy the animation
+        uses: cyberbotics/webots-animation-action@master
