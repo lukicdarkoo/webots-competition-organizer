@@ -13,4 +13,3 @@ and run Webots:
 ```bash
 webots webots-competition-template/worlds/ratslife_round.wbt
 ```
-
