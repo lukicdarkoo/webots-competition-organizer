@@ -5,6 +5,8 @@ on: [push]
 jobs:
   record:
     runs-on: ubuntu-latest
+    env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - run: |
           python3 -c "import os; os.environ['GITHUB_TOKEN']"
