@@ -1,9 +1,14 @@
 # webots-competition-organizer-template
 
-## Apply
-- Make a new repository out of [the template](https://github.com/lukicdarkoo/webots-competition-participant-template).
-- Add a deploy key `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMUXWdf+lWW/RYM2ScBUsqzmq4xbU/RCLyFoPSI5eO05 lukicdarkoo@gmail.com` in [here](../../settings/keys/new).
-- Add your repository to [competitors.txt](edit/main/competitors.txt).
+## Organize
+First, generate a private-public key pair:
+```bash
+ssh-keygen -C "lukicdarkoo@gmail.com" -t ed25519 -f /tmp/sshkey -q -N ""
+```
+
+Then [create a new secret](settings/secrets/actions/new), name it `DEPLOY_KEY_PRIVATE` and paste the key from `/tmp/sshkey` (generated in the previous step).
+
+Share the public key (located in `/tmp/sshkey.pub`) with participants.
 
 ## Participate
 
