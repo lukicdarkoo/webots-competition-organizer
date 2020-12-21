@@ -22,7 +22,7 @@
 #define ROUND_MANAGER_H
 
 void init_round();
-void run_round();
+int run_round();
 void cleanup_round();
 
 #endif

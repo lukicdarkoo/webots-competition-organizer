@@ -91,7 +91,11 @@ int main(int argc, char **argv) {
 
   // run the round
   while (1) {
-    run_round();
+    if (run_round()) {
+      wb_supervisor_simulation_quit(EXIT_SUCCESS);
+      wb_robot_cleanup();
+      exit(0);
+    }
     step(TIME_STEP);
   }
 

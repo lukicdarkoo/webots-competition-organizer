@@ -171,7 +171,7 @@ void init_round() {
 
 // main function
 // called every step of the supervisor
-void run_round() {
+int run_round() {
   char message[128];
   int i;
 
@@ -186,6 +186,7 @@ void run_round() {
     wb_supervisor_set_label(FIRST_LABEL, message, 0.0, 0.0, 0.1, WHITE, 0.0, "Arial");
     wb_supervisor_set_label(SECOND_LABEL, " ", 0.0, 0.0, 0.1, BLACK, 0.0, "Arial");
     final_counter++;
+    return 1;
   } else if (battery[1] <= 0.0 && winner != 1) {  // rat 0 wins
     snprintf(message, 128, "%s wins", competitor[R0]);
     write_winner_file(true);
@@ -193,6 +194,7 @@ void run_round() {
     wb_supervisor_set_label(FIRST_LABEL, message, 0.0, 0.0, 0.1, WHITE, 0.0, "Arial");
     wb_supervisor_set_label(SECOND_LABEL, " ", 0.0, 0.0, 0.1, BLACK, 0.0, "Arial");
     final_counter++;
+    return 1;
   } else if (counter > START_TIME) {  // display batteries
     for (i = 0; i < 2; i++) {
       snprintf(message, 128, "%s: %3.2f", competitor[i], battery[i]);
@@ -220,6 +222,7 @@ void run_round() {
 
   // increment the main counter
   counter++;
+  return 0;
 }
 
 // clean stuff
