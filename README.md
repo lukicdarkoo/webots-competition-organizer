@@ -1,9 +1,9 @@
-# webots-competition-template
+# webots-competition-organizer-template
 
 ## Apply
-- Make a new repository out of the template.
-- Add deploy key `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMUXWdf+lWW/RYM2ScBUsqzmq4xbU/RCLyFoPSI5eO05 lukicdarkoo@gmail.com` by clicking [here](../../settings/keys/new).
-- Add your repository to this [file](https://github.com/lukicdarkoo/webots-competition-template/edit/main/competitors.txt).
+- Make a new repository out of [the template](https://github.com/lukicdarkoo/webots-competition-participant-template).
+- Add a deploy key `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMUXWdf+lWW/RYM2ScBUsqzmq4xbU/RCLyFoPSI5eO05 lukicdarkoo@gmail.com` in [here](../../settings/keys/new).
+- Add your repository to [competitors.txt](edit/main/competitors.txt).
 
 ## Participate
 
