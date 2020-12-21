@@ -1,1 +1,1 @@
-https://github.com/lukicdarkoo/webots-competition-participant-template
+git@github.com:lukicdarkoo/webots-competition-participant-template.git
