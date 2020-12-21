@@ -63,6 +63,5 @@ while robot.step(timestep) != -1:
         if right_obstacle < 110:
             state = 'MOVE'
 
-    print(left_obstacle, left_speed)
     motor_left.setVelocity(left_speed)
     motor_right.setVelocity(right_speed)
