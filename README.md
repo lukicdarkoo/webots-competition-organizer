@@ -12,6 +12,6 @@ Deploy keys are necessary to be able to pull a code from participant's private r
     ssh-keygen -C "lukicdarkoo@gmail.com" -t ed25519 -f /tmp/sshkey -q -N ""
     ```
 
-- [Create a new secret](settings/secrets/actions/new), name it `DEPLOY_KEY_PRIVATE` and paste the key from `/tmp/sshkey` (generated in the previous step).
+- [Create a new secret](settings/secrets/actions/new), name it `DEPLOY_KEY` and paste the key from `/tmp/sshkey` (generated in the previous step).
 
 - Share the public key (located in `/tmp/sshkey.pub`) with participants.
