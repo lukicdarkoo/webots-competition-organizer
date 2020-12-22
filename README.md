@@ -1,6 +1,9 @@
-# webots-competition-organizer-template
+# webots-competition-organizer
 
 ## Organize
+
+### Make a repository
+First, you need to make a repository like this by clicking on the green button `Use this template`.
 
 ### Deploy keys
 
