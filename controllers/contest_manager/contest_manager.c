@@ -55,6 +55,8 @@ static void step(int s) {
 int main(int argc, char **argv) {
   wb_robot_init();
 
+  WbDeviceTag emitter = wb_robot_get_device("emitter");
+
   empty_the_temporary_path();
 
 #ifdef DEBUG
@@ -92,9 +94,7 @@ int main(int argc, char **argv) {
   // run the round
   while (1) {
     if (run_round()) {
-      wb_supervisor_simulation_quit(EXIT_SUCCESS);
-      wb_robot_cleanup();
-      exit(0);
+      wb_emitter_send(emitter, "done", 5);
     }
     step(TIME_STEP);
   }
