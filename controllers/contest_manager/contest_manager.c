@@ -22,6 +22,7 @@
 
 #include <webots/robot.h>
 #include <webots/supervisor.h>
+#include <webots/emitter.h>
 
 #include "maze_builder.h"
 #include "maze_generator.h"

@@ -1055,6 +1055,10 @@ Robot {
       name "helper_display"
       height 32
     }
+    Emitter {
+      name "emitter"
+      channel 1024
+    }
   ]
   locked TRUE
   controller "contest_manager"
