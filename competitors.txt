@@ -1,1 +1,1 @@
-git@github.com:lukicdarkoo/webots-competition-competitor.git
+https://github.com/lukicdarkoo/webots-competition-competitor
