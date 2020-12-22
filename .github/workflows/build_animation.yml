@@ -12,4 +12,5 @@ jobs:
         uses: cyberbotics/webots-animation-action@feature-competition
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          BOT_PAT_KEY: ${{ secrets.BOT_PAT_KEY }}
+          BOT_USERNAME: ${{ secrets.BOT_USERNAME }}
