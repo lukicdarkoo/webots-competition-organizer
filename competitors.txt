@@ -1,1 +1,2 @@
 https://github.com/lukicdarkoo/webots-competition-competitor
+https://github.com/lukicdarkoo-bot/super-bot
