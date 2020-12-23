@@ -95,7 +95,7 @@ int main(int argc, char **argv) {
   // run the round
   while (1) {
     if (run_round()) {
-      wb_emitter_send(emitter, "done", 5);
+      wb_emitter_send(emitter, "done", 4);
     }
     step(TIME_STEP);
   }
