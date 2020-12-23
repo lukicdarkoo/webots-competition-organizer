@@ -1056,7 +1056,6 @@ Robot {
       height 32
     }
     Emitter {
-      name "emitter"
       channel 1024
     }
   ]
