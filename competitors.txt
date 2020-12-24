@@ -1,3 +1,4 @@
 https://github.com/lukicdarkoo/webots-competition-competitor
 https://github.com/lukicdarkoo-bot/super-bot
 https://github.com/omichel/webots-competition-competitor
+https://github.com/lukicdarkoo/webots-rats-life
