@@ -1,5 +1,7 @@
 # webots-competition-organizer
 
+[![Webots Badge](https://badgen.net/badge/icon/Rankings?label=Webots)](https://lukicdarkoo.github.io/webots-competition-organizer/)
+
 ## Organize
 
 ### Make a repository
@@ -24,3 +26,8 @@ The sample competition is just a sample and you probably want implement a custom
   - The purpose of this [supervisor](https://www.cyberbotics.com/doc/reference/supervisor) controller is to keep a track of the competitors and their points, something like a referee.
   - You should write the competition results to `/tmp/winner.txt`, so the results can be parsed by CI.
   - Once the match is over, you should use the [Emitter](https://www.cyberbotics.com/doc/reference/emitter) node to send `done` on channel 1024 so our animation recorder is aware the match is done.
+
+## Publish the results
+The Webots GitHub action generates a preview of the competition and publishes it to the `gh-pages` branch.
+Therefore, you have to choose the `gh-pages` branch [as the publishing source](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source).
+Then, you can access the preview at `[your_username].github.io/[your_repo_name]`.
