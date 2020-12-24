@@ -4,8 +4,9 @@
 
 ## Organize
 
-### Make a repository
+### Make repositories
 First, you need to make a repository like this by clicking on the green button `Use this template`.
+You also need to do the same for [the competitor repository](https://github.com/lukicdarkoo/webots-competition-competitor) so the competitors can fork it and push their controllers.
 
 ### Personal Access Token
 
