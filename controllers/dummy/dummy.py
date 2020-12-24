@@ -22,8 +22,8 @@ robot = Robot()
 timestep = int(robot.getBasicTimeStep())
 
 # Initialize motors
-motor_left = robot.getMotor('left wheel motor')
-motor_right = robot.getMotor('right wheel motor')
+motor_left = robot.getDevice('left wheel motor')
+motor_right = robot.getDevice('right wheel motor')
 motor_left.setPosition(float('inf'))
 motor_right.setPosition(float('inf'))
 motor_left.setVelocity(0)
@@ -32,7 +32,7 @@ motor_right.setVelocity(0)
 # Initialize distance sensors
 ds = []
 for i in range(8):
-    sensor = robot.getDistanceSensor(f'ps{i}')
+    sensor = robot.getDevice(f'ps{i}')
     sensor.enable(timestep)
     ds.append(sensor)
 
