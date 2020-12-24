@@ -33,7 +33,7 @@
 #include <webots/supervisor.h>
 
 #define INPUT_FILE_NAME "input.txt"
-#define WINNER_FILE_NAME "/tmp/winner.txt"
+#define WINNER_FILE_NAME "/tmp/results.txt"
 #define FINAL_TIME 100
 #define START_TIME 100
 
@@ -89,14 +89,12 @@ static bool read_input_file() {
 }
 
 // write the result file containing the winner id
-static bool write_winner_file(bool rat0_win) {
+static bool write_winner_file(bool rat0_win, double* points) {
   FILE *file = fopen(WINNER_FILE_NAME, "w");
   if (!file)
     return false;
-  if (rat0_win)
-    fprintf(file, "0\n");
-  else
-    fprintf(file, "1\n");
+  fprintf(file, "winner: %d\n", (rat0_win) ? 0 : 1);
+  fprintf(file, "points: %f, %f\n", points[0], points[1]);
   fclose(file);
   return true;
 }
@@ -181,7 +179,7 @@ int run_round() {
 
   if (battery[0] <= 0.0 && winner != 0) {  // rat 1 wins
     snprintf(message, 128, "%s wins", competitor[R1]);
-    write_winner_file(false);
+    write_winner_file(false, battery);
     winner = 1;
     wb_supervisor_set_label(FIRST_LABEL, message, 0.0, 0.0, 0.1, WHITE, 0.0, "Arial");
     wb_supervisor_set_label(SECOND_LABEL, " ", 0.0, 0.0, 0.1, BLACK, 0.0, "Arial");
@@ -189,7 +187,7 @@ int run_round() {
     return 1;
   } else if (battery[1] <= 0.0 && winner != 1) {  // rat 0 wins
     snprintf(message, 128, "%s wins", competitor[R0]);
-    write_winner_file(true);
+    write_winner_file(true, battery);
     winner = 0;
     wb_supervisor_set_label(FIRST_LABEL, message, 0.0, 0.0, 0.1, WHITE, 0.0, "Arial");
     wb_supervisor_set_label(SECOND_LABEL, " ", 0.0, 0.0, 0.1, BLACK, 0.0, "Arial");

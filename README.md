@@ -25,7 +25,14 @@ The sample competition is just a sample and you probably want implement a custom
 - Change the scenario in the world file ([`worlds/ratslife_round.wbt`](worlds/ratslife_round.wbt)).
 - Change the [`contest manager controller`](controllers/contest_manager):
   - The purpose of this [supervisor](https://www.cyberbotics.com/doc/reference/supervisor) controller is to keep a track of the competitors and their points, something like a referee.
-  - You should write the competition results to `/tmp/winner.txt`, so the results can be parsed by CI.
+  - You should write the competition results to `/tmp/results.txt`, so the results can be parsed by CI.
+    ```bash
+    # Format of `/tmp/results.txt`:
+    #   winner: [index of winner]
+    #   points: [points of the first robot], [points of the second robot]
+    winner: 0
+    points: 111, 0
+    ```
   - Once the match is over, you should use the [Emitter](https://www.cyberbotics.com/doc/reference/emitter) node to send `done` on channel 1024 so our animation recorder is aware the match is done.
 
 ## Publish the results
